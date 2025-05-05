@@ -1,16 +1,28 @@
 [
   {
     "day": 1,
-    "message": "Day 1: Just a little hello and a big hug!",
-    "image": "images/day1.jpg",
-    "video": "",
-    "link": ""
+    "title": "Hello Love",
+    "text": "Today marks Day 1 of your surprise journey 💕",
+    "image": "images/day1.jpg"
   },
   {
     "day": 2,
-    "message": "Day 2: Here's a song that reminds me of you.",
-    "image": "",
-    "video": "",
-    "link": "https://open.spotify.com"
+    "title": "Banana Boy’s Note",
+    "text": "You make everything sweeter — even bananas 🍌✨",
+    "image": "images/day2.jpg"
+  },
+  {
+    "day": 3,
+    "title": "Pasta Queen’s Reward",
+    "text": "If love was a dish, you'd be my perfect pasta ❤️",
+    "video": "videos/day3.mp4"
+  },
+  {
+    "day": 4,
+    "title": "Rainy Days Together",
+    "text": "Even thunderstorms feel warm when you're with me.",
+    "image": "images/day4.jpg",
+    "link": "https://open.spotify.com/track/some-love-song"
   }
+  // ...add up to Day 14 later!
 ]
