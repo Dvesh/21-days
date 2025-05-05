@@ -1,0 +1,16 @@
+[
+  {
+    "day": 1,
+    "message": "Day 1: Just a little hello and a big hug!",
+    "image": "images/day1.jpg",
+    "video": "",
+    "link": ""
+  },
+  {
+    "day": 2,
+    "message": "Day 2: Here's a song that reminds me of you.",
+    "image": "",
+    "video": "",
+    "link": "https://open.spotify.com"
+  }
+]

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>14 Days of Love</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">14 Days of Love</h1>
+    <div id="surprise-container">
+      <p id="message">Loading surprise...</p>
+      <img id="image" src="" alt="" style="display:none;" />
+      <video id="video" controls style="display:none;"></video>
+      <a id="link" href="#" target="_blank" style="display:none;">Open Link</a>
+    </div>
+    <p id="countdown"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+fetch('surprises.json')
+  .then(response => response.json())
+  .then(data => {
+    const today = new Date();
+    const startDate = new Date(localStorage.getItem('startDate') || today);
+    localStorage.setItem('startDate', startDate);
+
+    const dayDiff = Math.floor((today - new Date(startDate)) / (1000 * 60 * 60 * 24));
+    const surprise = data[dayDiff];
+
+    const messageEl = document.getElementById('message');
+    const imageEl = document.getElementById('image');
+    const videoEl = document.getElementById('video');
+    const linkEl = document.getElementById('link');
+    const countdownEl = document.getElementById('countdown');
+
+    if (surprise) {
+      messageEl.textContent = surprise.message;
+      if (surprise.image) {
+        imageEl.src = surprise.image;
+        imageEl.style.display = 'block';
+      }
+      if (surprise.video) {
+        videoEl.src = surprise.video;
+        videoEl.style.display = 'block';
+      }
+      if (surprise.link) {
+        linkEl.href = surprise.link;
+        linkEl.textContent = "Click here";
+        linkEl.style.display = 'block';
+      }
+    } else {
+      messageEl.textContent = "Next surprise will be available soon!";
+      const nextUnlock = new Date(startDate);
+      nextUnlock.setDate(nextUnlock.getDate() + data.length);
+      const msLeft = nextUnlock - today;
+      const hours = Math.floor(msLeft / (1000 * 60 * 60));
+      const minutes = Math.floor((msLeft / (1000 * 60)) % 60);
+      countdownEl.textContent = `Come back in ${hours}h ${minutes}m`;
+    }
+  });
